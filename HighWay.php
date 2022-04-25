@@ -2,9 +2,9 @@
 
 abstract class HighWay
 {
-    private array $currentVehicles = [];
-    private int $nbLane;
-    private int $maxSpeed; 
+    protected array $currentVehicles = [];
+    protected int $nbLane;
+    protected int $maxSpeed; 
 
     public function __construct(int $nbLane, int $maxspeed)
     {

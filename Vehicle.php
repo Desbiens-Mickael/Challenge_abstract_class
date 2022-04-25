@@ -20,7 +20,7 @@ class Vehicle
     }
 
     // /////////// Méthode qui fait avancer le véhicule //////////////////
-    public function forward(): string
+     public function forward(): string
     {
         $this->currentSpeed = 15;
         return "Go !";

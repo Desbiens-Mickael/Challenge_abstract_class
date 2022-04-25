@@ -27,7 +27,7 @@ $motorWay->addVehicle($bike);
 $motorWay->addVehicle($Skateboard);
 
 // ///////// Affichage des véhicules du tableau currentVehicles /////////////
-var_dump($motorWay->getCurrentVehicles());
+// var_dump($motorWay->getCurrentVehicles());
 
 
 
@@ -38,7 +38,7 @@ $pedestrianWay->addVehicle($bike);
 $pedestrianWay->addVehicle($Skateboard);
 
 // ///////// Affichage des véhicules du tableau currentVehicles /////////////
-var_dump($pedestrianWay->getCurrentVehicles());
+// var_dump($pedestrianWay->getCurrentVehicles());
 
 
 
@@ -49,6 +49,20 @@ $residentialWay->addVehicle($bike);
 $residentialWay->addVehicle($Skateboard);
 
 // ///////// Affichage des véhicules du tableau currentVehicles /////////////
-var_dump($residentialWay->getCurrentVehicles());
+// var_dump($residentialWay->getCurrentVehicles());
+
+
+// test avec le try/catch l'erreur est capturée
+try {
+    echo $car->start();
+} catch (Exception $e) {
+    $car->setParkBrake(false);
+}finally{
+    echo "Ma voiture roule comme un donut";
+}
+
+// test après le try/catch le frein à main est maintenant égal à false
+echo $car->start();
+
 
 
