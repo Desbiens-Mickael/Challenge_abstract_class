@@ -1,7 +1,8 @@
 <?php
 require_once './Vehicle.php';
+require_once 'LightableInterface.php';
 
-class Truck extends Vehicle
+class Truck extends Vehicle implements LightableInterface
 {
     private int $storageCapacity;
     private int $load = 0;
@@ -12,6 +13,16 @@ class Truck extends Vehicle
     {
         parent::__construct( $color, $nbSeats, $energy);
         $this->storageCapacity = $storageCapacity;
+    }
+
+    public function switchOn(): bool
+    {
+        return true;
+    }
+
+    public function switchOff(): bool
+    {
+        return false;
     }
 
 // //////////// getters /////////////////

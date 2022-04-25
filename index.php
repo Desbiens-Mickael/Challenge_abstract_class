@@ -62,7 +62,12 @@ try {
 }
 
 // test après le try/catch le frein à main est maintenant égal à false
-echo $car->start();
+echo $car->start().PHP_EOL;
 
 
+// test de l'implémentation de l'interface LightableInterface 
+$bike->setCurrentSpeed(15);
 
+echo $bike->switchOn().PHP_EOL;
+echo $truck->switchOn().PHP_EOL;
+echo $car->switchOn();

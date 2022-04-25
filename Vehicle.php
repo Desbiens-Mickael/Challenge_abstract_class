@@ -46,11 +46,12 @@ class Vehicle
     }
 
     // /////////// Modifie la vitesse courante. //////////////
-    public function setCurrentSpeed(int $currentSpeed): void
+    public function setCurrentSpeed(int $currentSpeed): self
     {
         if($currentSpeed >= 0){
             $this->currentSpeed = $currentSpeed;
         }
+        return $this;
     }
 
     // /////////// Retourne la couleur ///////////////
